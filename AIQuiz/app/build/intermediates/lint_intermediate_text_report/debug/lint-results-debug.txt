@@ -1,0 +1,478 @@
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/other/Utils.java:24: Error: The pattern character 'Y' requires API level 24 (current min is 21) : "dd MMM YYYY hh:mm a" [NewApi]
+        SimpleDateFormat formatter = new SimpleDateFormat(Constants.DATE_FORMAT, Locale.getDefault());
+                                                          ~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewApi":
+   This check scans through all the Android API calls in the application and
+   warns about any calls that are not available on all versions targeted by
+   this application (according to its minimum SDK attribute in the manifest).
+
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+   If you are deliberately setting android: attributes in style definitions,
+   make sure you place this in a values-vNN folder in order to avoid running
+   into runtime conflicts on certain devices where manufacturers have added
+   custom attributes whose ids conflict with the new ones on later platforms.
+
+   Similarly, you can use tools:targetApi="11" in an XML file to indicate that
+   the element will only be inflated in an adequate context.
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/build.gradle:32: Warning: A newer version of androidx.appcompat:appcompat than 1.2.0 is available: 1.7.0 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/build.gradle:33: Warning: A newer version of com.google.android.material:material than 1.2.1 is available: 1.12.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.2.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/build.gradle:34: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.0.4 is available: 2.2.0 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/build.gradle:37: Warning: A newer version of androidx.test.ext:junit than 1.1.2 is available: 1.2.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/build.gradle:38: Warning: A newer version of androidx.test.espresso:espresso-core than 3.3.0 is available: 3.6.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/build.gradle:42: Warning: A newer version of androidx.room:room-runtime than 2.2.5 is available: 2.6.1 [GradleDependency]
+    implementation "androidx.room:room-runtime:$room_version"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/build.gradle:46: Warning: A newer version of com.google.code.gson:gson than 2.8.6 is available: 2.10.1 [GradleDependency]
+    implementation 'com.google.code.gson:gson:2.8.6'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/build.gradle:36: Warning: Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (junit:junit:4.+) [GradleDynamicVersion]
+    testImplementation 'junit:junit:4.+'
+                       ~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDynamicVersion":
+   Using + in dependencies lets you automatically pick up the latest available
+   version rather than a specific, named version. However, this is not
+   recommended; your builds are not repeatable; you may have tested with a
+   slightly different version than what the build server used. (Using a
+   dynamic version as the major version number is more problematic than using
+   it in the minor version position.)
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/AndroidManifest.xml:20: Warning: As of Android 12, android:exported must be set; use true to make the activity available to other apps, and false otherwise. For launcher activities, this should be set to true. [IntentFilterExportedReceiver]
+        <activity
+         ~~~~~~~~
+
+   Explanation for issues of type "IntentFilterExportedReceiver":
+   Apps targeting Android 12 and higher are required to specify an explicit
+   value for android:exported when the corresponding component has an intent
+   filter defined. Otherwise, installation will fail. Set it to true to make
+   this activity accessible to other apps, and false to limit it to be used
+   only by this app or the OS. For launch activities, this should be set to
+   true; otherwise, the app will fail to launch.
+
+   Previously, android:exported for components without any intent filters
+   present used to default to false, and when intent filters were present, the
+   default was true. Defaults which change value based on other values are
+   confusing and lead to apps accidentally exporting components as a
+   side-effect of adding intent filters. This is a security risk, and we have
+   made this change to avoid introducing accidental vulnerabilities.
+
+   While the default without intent filters remains unchanged, it is now
+   required to explicitly specify a value when intent filters are present. Any
+   app failing to meet this requirement will fail to install on any Android
+   version after Android 11.
+
+   We recommend setting android:exported to false (even on previous versions
+   of Android prior to this requirement) unless you have a good reason to
+   export a particular component.
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/build.gradle:11: Error: Google Play requires that apps target API level 31 or higher.
+ [ExpiredTargetSdkVersion]
+        targetSdkVersion 30
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ExpiredTargetSdkVersion":
+   As of the second half of 2018, Google Play requires that new apps and app
+   updates target API level 26 or higher.
+
+   Configuring your app to target a recent API level ensures that users
+   benefit from significant security and performance improvements, while still
+   allowing your app to run on older Android versions (down to the
+   minSdkVersion).
+
+   To update your targetSdkVersion, follow the steps from "Meeting Google Play
+   requirements for target API level",
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://support.google.com/googleplay/android-developer/answer/113469#targetsdk
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/themes.xml:9: Warning: Unnecessary; SDK_INT is always >= 21 [ObsoleteSdkInt]
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+                                            ~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values-night/themes.xml:13: Warning: Unnecessary; SDK_INT is always >= 21 [ObsoleteSdkInt]
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+                                            ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/EditPasswordActivity.java:98: Warning: This AsyncTask class should be static or leaks might occur (com.sagarkhurana.quizforfun.EditPasswordActivity.UpdatePasswordTask) [StaticFieldLeak]
+    class UpdatePasswordTask extends AsyncTask<Void, Void, Void> {
+          ~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/FinalResultActivity.java:87: Warning: This AsyncTask class should be static or leaks might occur (com.sagarkhurana.quizforfun.FinalResultActivity.GetOverallPointsTask) [StaticFieldLeak]
+    class GetOverallPointsTask extends AsyncTask<Void, Void, Void> {
+          ~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/FinalResultActivity.java:127: Warning: This AsyncTask class should be static or leaks might occur (com.sagarkhurana.quizforfun.FinalResultActivity.SaveUserAttemptTask) [StaticFieldLeak]
+    class SaveUserAttemptTask extends AsyncTask<Void, Void, Void> {
+          ~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/HistoryActivity.java:51: Warning: This AsyncTask class should be static or leaks might occur (com.sagarkhurana.quizforfun.HistoryActivity.GetAllUserAttemptTask) [StaticFieldLeak]
+    class GetAllUserAttemptTask extends AsyncTask<Void, Void, Void> {
+          ~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/LoginActivity.java:87: Warning: This AsyncTask class should be static or leaks might occur (com.sagarkhurana.quizforfun.LoginActivity.LoginUserTask) [StaticFieldLeak]
+    class LoginUserTask extends AsyncTask<Void, Void, Void> {
+          ~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/RegisterActivity.java:86: Warning: This AsyncTask class should be static or leaks might occur (com.sagarkhurana.quizforfun.RegisterActivity.RegisterUserTask) [StaticFieldLeak]
+    class RegisterUserTask extends AsyncTask<Void, Void, Void> {
+          ~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/blackboard.xml:43: Warning: Very long vector path (1050 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector. [VectorPath]
+      android:pathData="M68.6889,55.4991L51.8139,28.7803C51.7044,28.607 51.5583,28.4596 51.3858,28.3487C51.2134,28.2377 51.0188,28.1658 50.8156,28.138C50.6124,28.1102 50.4057,28.1272 50.2097,28.1878C50.0138,28.2483 49.8335,28.351 49.6815,28.4885L27.5747,48.4898L27.5717,48.4924L20.1502,55.2073C19.9396,55.3979 19.7916,55.6479 19.7258,55.9242C19.6599,56.2006 19.6794,56.4904 19.7815,56.7555C19.8836,57.0206 20.0637,57.2486 20.2979,57.4094C20.5321,57.5702 20.8095,57.6562 21.0936,57.6563H67.4999C67.7515,57.6563 67.9985,57.5888 68.2151,57.4608C68.4317,57.3329 68.61,57.1492 68.7315,56.9288C68.8529,56.7085 68.913,56.4596 68.9055,56.2081C68.898,55.9567 68.8232,55.7118 68.6889,55.4991ZM54.8436,54.8438H52.0311V52.0313H54.8436V54.8438ZM24.7439,54.8438L28.4329,51.506C29.1463,52.4726 29.5312,53.6424 29.5311,54.8438H24.7439ZM30.5232,49.6148L49.2186,32.6999V54.8438H32.3436C32.343,52.9455 31.7016,51.1031 30.5232,49.6148ZM57.6561,54.8438V50.625C57.6561,50.2521 57.508,49.8944 57.2443,49.6306C56.9805,49.3669 56.6229,49.2188 56.2499,49.2188H52.0311V34.3913L64.9484,54.8438H57.6561Z"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/quiz.xml:16: Warning: Very long vector path (1045 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector. [VectorPath]
+        android:pathData="M24.2402,64.185C22.71,62.4888 23.8072,60.9232 24.2416,60.424C24.3412,60.3095 24.3971,60.1639 24.3971,60.0122V51.6115C24.3971,51.4601 24.342,51.3129 24.241,51.2C22.7643,49.5509 23.8435,47.9375 24.2556,47.4342C24.3471,47.3223 24.3971,47.1833 24.3971,47.0389V38.6286C24.3971,38.4757 24.3417,38.3268 24.2385,38.2141C22.6164,36.4418 23.6739,34.9875 24.1754,34.4659C24.3139,34.3218 24.3727,34.1187 24.3386,33.9218L21.7534,19.0021C21.7319,18.8785 21.6721,18.7649 21.5852,18.6744C18.1805,15.1274 20.2633,11.6444 21.0958,10.535C21.2403,10.3423 21.2743,10.0816 21.1624,9.8682C20.9631,9.488 21.1203,9.17 21.2545,8.9942C21.3408,8.8813 21.3923,8.7457 21.3923,8.6034V5.8776C21.3923,5.7552 21.347,5.6394 21.2752,5.5403C21.0445,5.2221 21.0953,4.9031 21.1917,4.6756C21.2839,4.4585 21.2471,4.2092 21.0958,4.0283C19.754,2.4241 20.5043,1.0364 21.0253,0.3889C21.1171,0.2748 21.161,0.1371 21.1612,0.0001H9.6491C6.1223,-0 3.2634,2.8591 3.2634,6.386V54.513C4.3991,57.53 5.911,60.3626 7.7394,62.9557L24.3973,65.7676V64.5976C24.3973,64.4456 24.342,64.2978 24.2402,64.185Z"
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/quiz.xml:73: Warning: Very long vector path (894 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector. [VectorPath]
+        android:pathData="M48.0588,15.0464C48.0588,23.3562 54.7953,30.0928 63.1052,30.0928C66.9897,30.0928 70.53,28.6206 73.1995,26.204C73.1319,26.1133 73.0393,26.0413 72.9279,26.0021C72.1423,25.7251 71.9974,25.0425 72.0037,24.5529C72.0074,24.2633 71.7945,24.0116 71.5089,23.9635C70.3597,23.7698 70.1041,22.9771 70.0673,22.4389C70.0477,22.151 69.8124,21.9255 69.5249,21.9005C66.5194,21.6401 66.0446,19.3117 65.975,18.3894C65.9576,18.1575 65.8081,17.9576 65.5899,17.8768C64.7866,17.579 62.8794,16.864 61.6924,16.3568C60.4884,15.8422 60.7173,13.2142 60.8718,12.1061C60.9102,11.8307 60.7453,11.5744 60.4839,11.4792C58.1782,10.6386 58.6961,7.7572 59.0242,6.56C59.0994,6.2859 58.9736,5.9924 58.7167,5.8706C57.7729,5.4233 57.8184,4.4982 57.9619,3.914C58.0286,3.6428 57.9,3.3663 57.6526,3.2368C57.0113,2.9014 56.9459,2.1959 56.9835,1.7262C56.9946,1.587 56.9541,1.454 56.8772,1.3462C51.6752,3.7145 48.0588,8.958 48.0588,15.0464Z"
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/rules.xml:28: Warning: Very long vector path (825 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector. [VectorPath]
+      android:pathData="M13.0157,14.8751C12.8586,14.8753 12.7031,14.8445 12.5581,14.7844C12.413,14.7243 12.2812,14.6361 12.1704,14.525L10.5766,12.9312C10.4651,12.8203 10.3766,12.6885 10.3162,12.5434C10.2557,12.3982 10.2245,12.2426 10.2242,12.0853C10.224,11.9281 10.2549,11.7723 10.3149,11.627C10.375,11.4817 10.4632,11.3497 10.5744,11.2385C10.6856,11.1273 10.8176,11.0391 10.9629,10.9791C11.1082,10.919 11.264,10.8882 11.4212,10.8884C11.5785,10.8886 11.7341,10.9199 11.8793,10.9803C12.0244,11.0408 12.1562,11.1293 12.2671,11.2408L13.0157,11.9893L16.1547,8.8502C16.3791,8.627 16.6828,8.502 16.9993,8.5024C17.3157,8.5028 17.6191,8.6287 17.8429,8.8525C18.0666,9.0762 18.1926,9.3796 18.193,9.696C18.1934,10.0125 18.0684,10.3162 17.8452,10.5406L13.8608,14.525C13.75,14.6361 13.6182,14.7243 13.4732,14.7844C13.3281,14.8444 13.1727,14.8753 13.0157,14.8751Z"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/rules.xml:34: Warning: Very long vector path (1067 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector. [VectorPath]
+      android:pathData="M38.3468,11.5547L39.8921,10.0093C40.1132,9.7845 40.2366,9.4814 40.2353,9.1661C40.234,8.8508 40.1082,8.5487 39.8852,8.3258C39.6623,8.1028 39.3602,7.9769 39.0449,7.9757C38.7296,7.9744 38.4265,8.0977 38.2017,8.3189L36.6563,9.8642L35.1109,8.3189C34.8861,8.0977 34.583,7.9744 34.2677,7.9757C33.9524,7.9769 33.6503,8.1028 33.4273,8.3258C33.2044,8.5487 33.0785,8.8508 33.0773,9.1661C33.076,9.4814 33.1993,9.7845 33.4205,10.0093L34.9658,11.5547L33.4205,13.1001C33.308,13.2108 33.2186,13.3426 33.1573,13.488C33.096,13.6335 33.0641,13.7896 33.0635,13.9473C33.0628,14.1051 33.0934,14.2615 33.1535,14.4074C33.2136,14.5533 33.302,14.6858 33.4136,14.7974C33.5251,14.909 33.6577,14.9974 33.8036,15.0575C33.9495,15.1175 34.1059,15.1482 34.2637,15.1475C34.4214,15.1469 34.5775,15.115 34.7229,15.0537C34.8684,14.9924 35.0002,14.903 35.1109,14.7905L36.6563,13.2452L38.2017,14.7905C38.4265,15.0117 38.7296,15.135 39.0449,15.1337C39.3602,15.1325 39.6623,15.0066 39.8852,14.7837C40.1082,14.5607 40.234,14.2586 40.2353,13.9433C40.2366,13.628 40.1132,13.3249 39.8921,13.1001L38.3468,11.5547Z"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/worldwide.xml:19: Warning: Very long vector path (935 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector. [VectorPath]
+      android:pathData="M54.3079,15.5307L60.5153,13.9789L65.1708,15.5307L72.93,17.0825L77.5856,13.9789C80.1849,16.6993 82.4273,19.7393 84.2584,23.026L83.793,23.2899L74.482,26.3935L65.171,24.8417L62.0674,20.1861H52.7564L48.1009,24.8417L49.6527,35.7045L60.5154,40.36L66.7228,38.8082L71.3784,41.9118V48.1192L74.482,54.3266L77.5856,60.534V66.7413L81.7755,70.9313C67.4444,91.2386 39.3638,96.0819 19.0581,81.7506C1.8125,69.5779 -4.6572,47.0561 3.5009,27.5885L6.201,35.7045L10.8566,38.8081L15.5122,41.9117L12.4084,45.0154V49.671L15.512,55.8784L23.2712,57.4302V72.9485L26.3748,80.7077L31.0304,82.2595V74.5004L37.2377,69.8448V65.1892L43.4451,58.9818L44.9969,51.2226H38.7895L34.134,43.4635H23.2712L20.1676,37.2561L15.512,41.9117V35.7043L12.4084,32.6009V27.9453L23.2712,26.3935L31.0304,21.7379L35.6859,13.9787L40.3415,12.4269L41.8933,7.7714L32.5823,6.2196L28.1751,3.271C40.1088,-1.535 53.529,-1.0044 65.0467,4.7298L58.9635,7.7714H52.7561L49.6525,13.9787L54.3079,15.5307Z"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "VectorPath":
+   Using long vector paths is bad for performance. There are several ways to
+   make the pathData shorter:
+   * Using less precision
+   * Removing some minor details
+   * Using the Android Studio vector conversion tool
+   * Rasterizing the image (converting to PNG)
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_main.xml:7: Warning: Possible overdraw: Root element paints background @color/peach with a theme that also paints a background (inferred theme is @style/Theme.QuizForFun) [Overdraw]
+    android:background="@color/peach"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/colors.xml:4: Warning: The resource R.color.purple_500 appears to be unused [UnusedResources]
+    <color name="purple_500">#FF6200EE</color>
+           ~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/colors.xml:7: Warning: The resource R.color.teal_700 appears to be unused [UnusedResources]
+    <color name="teal_700">#FF018786</color>
+           ~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/colors.xml:15: Warning: The resource R.color.blue_med appears to be unused [UnusedResources]
+    <color name="blue_med">#03A9F4</color>
+           ~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/colors.xml:16: Warning: The resource R.color.light_blue_med appears to be unused [UnusedResources]
+    <color name="light_blue_med">#89C4DA</color>
+           ~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/dimen.xml:8: Warning: The resource R.dimen.margin_start appears to be unused [UnusedResources]
+    <dimen name="margin_start">24dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/dimen.xml:9: Warning: The resource R.dimen.margin_end appears to be unused [UnusedResources]
+    <dimen name="margin_end">24dp</dimen>
+           ~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/dimen.xml:17: Warning: The resource R.dimen.icon_image_view_size appears to be unused [UnusedResources]
+    <dimen name="icon_image_view_size">25dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/ic_launcher_background.xml:2: Warning: The resource R.drawable.ic_launcher_background appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable-v24/ic_launcher_foreground.xml:1: Warning: The resource R.drawable.ic_launcher_foreground appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/mipmap-hdpi/ic_launcher_round.png: Warning: The resource R.mipmap.ic_launcher_round appears to be unused [UnusedResources]
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/selected.xml:2: Warning: The resource R.drawable.selected appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/strings.xml:12: Warning: The resource R.string.new_password_cannot_be_empty appears to be unused [UnusedResources]
+    <string name="new_password_cannot_be_empty">New Password cannot be empty</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/strings.xml:13: Warning: The resource R.string.confirm_new_password_cannot_be_empty appears to be unused [UnusedResources]
+    <string name="confirm_new_password_cannot_be_empty">Confirm New Password cannot be empty</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/strings.xml:21: Warning: The resource R.string.register appears to be unused [UnusedResources]
+    <string name="register">Register</string>
+            ~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/themes.xml:38: Warning: The resource R.style.MyAppearance appears to be unused [UnusedResources]
+    <style name="MyAppearance" parent="TextAppearance.AppCompat">
+           ~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/values/themes.xml:42: Warning: The resource R.style.edtTextInputStyle appears to be unused [UnusedResources]
+    <style name="edtTextInputStyle" parent="Widget.AppCompat.EditText">
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/unselected.xml:2: Warning: The resource R.drawable.unselected appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/correct.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/incorrect.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/noted.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable-v24/question1.gif: Warning: Using the .gif format for bitmaps is discouraged [GifUsage]
+
+   Explanation for issues of type "GifUsage":
+   The .gif file format is discouraged. Consider using .png (preferred) or
+   .jpg (acceptable) instead.
+
+   https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/correct.gif: Warning: Found bitmap drawable res/drawable/correct.gif in densityless folder [IconLocation]
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/incorrect.gif: Warning: Found bitmap drawable res/drawable/incorrect.gif in densityless folder [IconLocation]
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/drawable/noted.gif: Warning: Found bitmap drawable res/drawable/noted.gif in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_edit_password.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_final_result.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_geography_or_literature_quiz.xml:19: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_history.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_main.xml:73: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_main.xml:113: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_main.xml:152: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_main.xml:192: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_main.xml:231: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_math_quiz.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_quiz_option.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_quiz_option.xml:51: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_quiz_option.xml:91: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_quiz_option.xml:130: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_register.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_rule.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, just suppress the lint
+   warning with a tools:ignore="ContentDescription" attribute.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/item_history.xml:14: Warning: 'clickable' attribute found, please also add 'focusable' [KeyboardInaccessibleWidget]
+    android:clickable="true">
+    ~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "KeyboardInaccessibleWidget":
+   A widget that is declared to be clickable but not declared to be focusable
+   is not accessible via the keyboard. Please add the focusable attribute as
+   well.
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java:102: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java:102: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                                         ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java:102: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                 ~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java:111: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java:111: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                                         ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java:111: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                 ~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MainActivity.java:30: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvUsername.setText("Mar7ba, " + user.getUsername());
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MainActivity.java:30: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvUsername.setText("Mar7ba, " + user.getUsername());
+                           ~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MathQuizActivity.java:86: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestion.setText(questions.get(currentQuestionIndex) + " = ?");
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MathQuizActivity.java:87: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MathQuizActivity.java:87: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                                         ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MathQuizActivity.java:87: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                 ~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MathQuizActivity.java:95: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestion.setText(questions.get(currentQuestionIndex) + " = ?");
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MathQuizActivity.java:96: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MathQuizActivity.java:96: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                                         ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/MathQuizActivity.java:96: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        tvQuestionNumber.setText("Current Question: " + (currentQuestionIndex + 1));
+                                 ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/java/com/sagarkhurana/quizforfun/other/Utils.java:24: Warning: DateFormat character 'Y' in YYYY is the week-era-year; did you mean 'y'? [WeekBasedYear]
+        SimpleDateFormat formatter = new SimpleDateFormat(Constants.DATE_FORMAT, Locale.getDefault());
+                                                          ~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "WeekBasedYear":
+   The DateTimeFormatter pattern YYYY returns the week based year, not the
+   era-based year. This means that 12/29/2019 will format to 2019, but
+   12/30/2019 will format to 2020!
+
+   If you expected this to format as 2019, you should use the pattern yyyy
+   instead.
+
+   https://stackoverflow.com/questions/46847245/using-datetimeformatter-on-january-first-cause-an-invalid-year-value
+
+/home/ahmed/AndroidStudioProjects/mini_projet_android/quiz/AIQuiz/app/src/main/res/layout/activity_main.xml:17: Warning: Hardcoded string "Accueil", should use @string resource [HardcodedText]
+        android:text="Accueil"
+        ~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+2 errors, 83 warnings

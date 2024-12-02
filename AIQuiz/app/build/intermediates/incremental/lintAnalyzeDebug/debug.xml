@@ -1,0 +1,32 @@
+<variant
+    name="debug"
+    package="com.sagarkhurana.quizforfun"
+    minSdkVersion="24"
+    targetSdkVersion="34"
+    debuggable="true"
+    mergedManifest="build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml"
+    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android.txt-8.6.1"
+    partialResultsDir="build/intermediates/lint_partial_results/debug/lintAnalyzeDebug/out"
+    desugaredMethodsFiles="/home/ahmed/.gradle/caches/transforms-4/3c0eb68c3bd834c5e252140e4919c7a0/transformed/D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src/main/AndroidManifest.xml"
+        javaDirectories="src/main/java:src/debug/java:src/main/kotlin:src/debug/kotlin"
+        resDirectories="src/main/res:src/debug/res"
+        assetsDirectories="src/main/assets:src/debug/assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      classOutputs="build/intermediates/javac/debug/compileDebugJavaWithJavac/classes:build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar"
+      type="MAIN"
+      applicationId="com.sagarkhurana.quizforfun"
+      generatedSourceFolders="build/generated/ap_generated_sources/debug/out:build/generated/source/buildConfig/debug"
+      generatedResourceFolders="build/generated/res/resValues/debug"
+      desugaredMethodsFiles="/home/ahmed/.gradle/caches/transforms-4/3c0eb68c3bd834c5e252140e4919c7a0/transformed/D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>

@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.4.2" type="incidents">
+
+    <incident
+        id="VectorPath"
+        severity="warning"
+        message="Very long vector path (1050 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/blackboard.xml"
+            line="43"
+            column="25"
+            startOffset="1750"
+            endLine="43"
+            endColumn="1075"
+            endOffset="2800"/>
+    </incident>
+
+    <incident
+        id="VectorPath"
+        severity="warning"
+        message="Very long vector path (1045 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/quiz.xml"
+            line="16"
+            column="27"
+            startOffset="882"
+            endLine="16"
+            endColumn="1072"
+            endOffset="1927"/>
+    </incident>
+
+    <incident
+        id="VectorPath"
+        severity="warning"
+        message="Very long vector path (894 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/quiz.xml"
+            line="73"
+            column="27"
+            startOffset="8646"
+            endLine="73"
+            endColumn="921"
+            endOffset="9540"/>
+    </incident>
+
+    <incident
+        id="VectorPath"
+        severity="warning"
+        message="Very long vector path (825 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/rules.xml"
+            line="28"
+            column="25"
+            startOffset="2873"
+            endLine="28"
+            endColumn="850"
+            endOffset="3698"/>
+    </incident>
+
+    <incident
+        id="VectorPath"
+        severity="warning"
+        message="Very long vector path (1067 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/rules.xml"
+            line="34"
+            column="25"
+            startOffset="4048"
+            endLine="34"
+            endColumn="1092"
+            endOffset="5115"/>
+    </incident>
+
+    <incident
+        id="VectorPath"
+        severity="warning"
+        message="Very long vector path (935 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/worldwide.xml"
+            line="19"
+            column="25"
+            startOffset="1446"
+            endLine="19"
+            endColumn="960"
+            endOffset="2381"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_edit_password.xml"
+            line="9"
+            column="6"
+            startOffset="394"
+            endLine="9"
+            endColumn="15"
+            endOffset="403"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_final_result.xml"
+            line="9"
+            column="6"
+            startOffset="393"
+            endLine="9"
+            endColumn="15"
+            endOffset="402"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_geography_or_literature_quiz.xml"
+            line="19"
+            column="14"
+            startOffset="719"
+            endLine="19"
+            endColumn="23"
+            endOffset="728"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+            line="9"
+            column="6"
+            startOffset="389"
+            endLine="9"
+            endColumn="15"
+            endOffset="398"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Accueil&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="17"
+            column="9"
+            startOffset="657"
+            endLine="17"
+            endColumn="31"
+            endOffset="679"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="73"
+            column="18"
+            startOffset="2984"
+            endLine="73"
+            endColumn="27"
+            endOffset="2993"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="113"
+            column="18"
+            startOffset="4919"
+            endLine="113"
+            endColumn="27"
+            endOffset="4928"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="152"
+            column="18"
+            startOffset="6831"
+            endLine="152"
+            endColumn="27"
+            endOffset="6840"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="192"
+            column="18"
+            startOffset="8734"
+            endLine="192"
+            endColumn="27"
+            endOffset="8743"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="231"
+            column="18"
+            startOffset="10670"
+            endLine="231"
+            endColumn="27"
+            endOffset="10679"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_math_quiz.xml"
+            line="9"
+            column="6"
+            startOffset="390"
+            endLine="9"
+            endColumn="15"
+            endOffset="399"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_quiz_option.xml"
+            line="9"
+            column="6"
+            startOffset="392"
+            endLine="9"
+            endColumn="15"
+            endOffset="401"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_quiz_option.xml"
+            line="51"
+            column="14"
+            startOffset="2067"
+            endLine="51"
+            endColumn="23"
+            endOffset="2076"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_quiz_option.xml"
+            line="91"
+            column="14"
+            startOffset="3829"
+            endLine="91"
+            endColumn="23"
+            endOffset="3838"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_quiz_option.xml"
+            line="130"
+            column="14"
+            startOffset="5609"
+            endLine="130"
+            endColumn="23"
+            endOffset="5618"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="9"
+            column="6"
+            startOffset="390"
+            endLine="9"
+            endColumn="15"
+            endOffset="399"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_rule.xml"
+            line="9"
+            column="6"
+            startOffset="386"
+            endLine="9"
+            endColumn="15"
+            endOffset="395"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="This `AsyncTask` class should be static or leaks might occur (com.sagarkhurana.quizforfun.EditPasswordActivity.UpdatePasswordTask)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/EditPasswordActivity.java"
+            line="98"
+            column="11"
+            startOffset="3396"
+            endLine="98"
+            endColumn="29"
+            endOffset="3414"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="This `AsyncTask` class should be static or leaks might occur (com.sagarkhurana.quizforfun.FinalResultActivity.GetOverallPointsTask)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/FinalResultActivity.java"
+            line="87"
+            column="11"
+            startOffset="3051"
+            endLine="87"
+            endColumn="31"
+            endOffset="3071"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="This `AsyncTask` class should be static or leaks might occur (com.sagarkhurana.quizforfun.FinalResultActivity.SaveUserAttemptTask)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/FinalResultActivity.java"
+            line="127"
+            column="11"
+            startOffset="4485"
+            endLine="127"
+            endColumn="30"
+            endOffset="4504"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java"
+            line="102"
+            column="34"
+            startOffset="4037"
+            endLine="102"
+            endColumn="83"
+            endOffset="4086"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java"
+            line="102"
+            column="34"
+            startOffset="4037"
+            endLine="102"
+            endColumn="54"
+            endOffset="4057"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java"
+            line="102"
+            column="58"
+            startOffset="4061"
+            endLine="102"
+            endColumn="82"
+            endOffset="4085"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java"
+            line="111"
+            column="34"
+            startOffset="4363"
+            endLine="111"
+            endColumn="83"
+            endOffset="4412"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java"
+            line="111"
+            column="34"
+            startOffset="4363"
+            endLine="111"
+            endColumn="54"
+            endOffset="4383"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/GeographyOrLiteratureQuizActivity.java"
+            line="111"
+            column="58"
+            startOffset="4387"
+            endLine="111"
+            endColumn="82"
+            endOffset="4411"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="This `AsyncTask` class should be static or leaks might occur (com.sagarkhurana.quizforfun.HistoryActivity.GetAllUserAttemptTask)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/HistoryActivity.java"
+            line="51"
+            column="11"
+            startOffset="1688"
+            endLine="51"
+            endColumn="32"
+            endOffset="1709"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="This `AsyncTask` class should be static or leaks might occur (com.sagarkhurana.quizforfun.LoginActivity.LoginUserTask)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/LoginActivity.java"
+            line="87"
+            column="11"
+            startOffset="2545"
+            endLine="87"
+            endColumn="24"
+            endOffset="2558"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MainActivity.java"
+            line="30"
+            column="28"
+            startOffset="1063"
+            endLine="30"
+            endColumn="59"
+            endOffset="1094"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MainActivity.java"
+            line="30"
+            column="28"
+            startOffset="1063"
+            endLine="30"
+            endColumn="38"
+            endOffset="1073"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MathQuizActivity.java"
+            line="86"
+            column="28"
+            startOffset="3123"
+            endLine="86"
+            endColumn="72"
+            endOffset="3167"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MathQuizActivity.java"
+            line="87"
+            column="34"
+            startOffset="3203"
+            endLine="87"
+            endColumn="83"
+            endOffset="3252"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MathQuizActivity.java"
+            line="87"
+            column="34"
+            startOffset="3203"
+            endLine="87"
+            endColumn="54"
+            endOffset="3223"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MathQuizActivity.java"
+            line="87"
+            column="58"
+            startOffset="3227"
+            endLine="87"
+            endColumn="82"
+            endOffset="3251"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MathQuizActivity.java"
+            line="95"
+            column="28"
+            startOffset="3458"
+            endLine="95"
+            endColumn="72"
+            endOffset="3502"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MathQuizActivity.java"
+            line="96"
+            column="34"
+            startOffset="3538"
+            endLine="96"
+            endColumn="83"
+            endOffset="3587"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MathQuizActivity.java"
+            line="96"
+            column="34"
+            startOffset="3538"
+            endLine="96"
+            endColumn="54"
+            endOffset="3558"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/MathQuizActivity.java"
+            line="96"
+            column="58"
+            startOffset="3562"
+            endLine="96"
+            endColumn="82"
+            endOffset="3586"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="This `AsyncTask` class should be static or leaks might occur (com.sagarkhurana.quizforfun.RegisterActivity.RegisterUserTask)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/RegisterActivity.java"
+            line="86"
+            column="11"
+            startOffset="2840"
+            endLine="86"
+            endColumn="27"
+            endOffset="2856"/>
+    </incident>
+
+    <incident
+        id="WeekBasedYear"
+        severity="warning"
+        message="`DateFormat` character &apos;Y&apos; in YYYY is the week-era-year; did you mean &apos;y&apos;?">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/sagarkhurana/quizforfun/other/Utils.java"
+            line="24"
+            column="59"
+            startOffset="660"
+            endLine="24"
+            endColumn="80"
+            endOffset="681"/>
+    </incident>
+
+    <incident
+        id="GradleDynamicVersion"
+        severity="warning"
+        message="Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (junit:junit:4.+)">
+        <fix-data coordinate="junit:junit:4.+"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="36"
+            column="24"
+            startOffset="994"
+            endLine="36"
+            endColumn="41"
+            endOffset="1011"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.2.0 is available: 1.7.0">
+        <fix-replace
+            description="Change to 1.7.0"
+            family="Update versions"
+            oldString="1.2.0"
+            replacement="1.7.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="32"
+            column="20"
+            startOffset="726"
+            endLine="32"
+            endColumn="56"
+            endOffset="762"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.2.1 is available: 1.12.0">
+        <fix-replace
+            description="Change to 1.12.0"
+            family="Update versions"
+            oldString="1.2.1"
+            replacement="1.12.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="33"
+            column="20"
+            startOffset="783"
+            endLine="33"
+            endColumn="64"
+            endOffset="827"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.0.4 is available: 2.2.0">
+        <fix-replace
+            description="Change to 2.2.0"
+            family="Update versions"
+            oldString="2.0.4"
+            replacement="2.2.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="34"
+            column="20"
+            startOffset="848"
+            endLine="34"
+            endColumn="70"
+            endOffset="898"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.2 is available: 1.2.1">
+        <fix-replace
+            description="Change to 1.2.1"
+            family="Update versions"
+            oldString="1.1.2"
+            replacement="1.2.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="37"
+            column="31"
+            startOffset="1043"
+            endLine="37"
+            endColumn="62"
+            endOffset="1074"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.3.0 is available: 3.6.1">
+        <fix-replace
+            description="Change to 3.6.1"
+            family="Update versions"
+            oldString="3.3.0"
+            replacement="3.6.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="38"
+            column="31"
+            startOffset="1106"
+            endLine="38"
+            endColumn="75"
+            endOffset="1150"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-runtime than 2.2.5 is available: 2.6.1">
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="42"
+            column="20"
+            startOffset="1218"
+            endLine="42"
+            endColumn="62"
+            endOffset="1260"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.code.gson:gson than 2.8.6 is available: 2.10.1">
+        <fix-replace
+            description="Change to 2.10.1"
+            family="Update versions"
+            oldString="2.8.6"
+            replacement="2.10.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="46"
+            column="20"
+            startOffset="1365"
+            endLine="46"
+            endColumn="53"
+            endOffset="1398"/>
+    </incident>
+
+    <incident
+        id="GifUsage"
+        severity="warning"
+        message="Using the `.gif` format for bitmaps is discouraged">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-v24/question1.gif"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/correct.gif` in densityless folder">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/correct.gif"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/incorrect.gif` in densityless folder">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/incorrect.gif"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/noted.gif` in densityless folder">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/noted.gif"/>
+    </incident>
+
+    <incident
+        id="GifUsage"
+        severity="warning"
+        message="Using the `.gif` format for bitmaps is discouraged">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/correct.gif"/>
+    </incident>
+
+    <incident
+        id="GifUsage"
+        severity="warning"
+        message="Using the `.gif` format for bitmaps is discouraged">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/incorrect.gif"/>
+    </incident>
+
+    <incident
+        id="GifUsage"
+        severity="warning"
+        message="Using the `.gif` format for bitmaps is discouraged">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/noted.gif"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/peach` with a theme that also paints a background (inferred theme is `@style/Theme.QuizForFun`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="7"
+            column="5"
+            startOffset="347"
+            endLine="7"
+            endColumn="38"
+            endOffset="380"/>
+    </incident>
+
+</incidents>
